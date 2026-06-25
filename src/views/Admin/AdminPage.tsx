@@ -70,12 +70,13 @@ export const AdminPage = () => {
       </div>
 
       <Tabs defaultValue="users">
-        <TabsList className="grid w-full grid-cols-6">
+        <TabsList className="grid w-full grid-cols-7">
           <TabsTrigger value="users">Användare</TabsTrigger>
           <TabsTrigger value="credits">Krediter</TabsTrigger>
           <TabsTrigger value="keys">API-nycklar</TabsTrigger>
           <TabsTrigger value="usage">Användning</TabsTrigger>
           <TabsTrigger value="models">Modeller</TabsTrigger>
+          <TabsTrigger value="website">Webbplats</TabsTrigger>
           <TabsTrigger value="settings">Inställningar</TabsTrigger>
         </TabsList>
 
@@ -107,11 +108,14 @@ export const AdminPage = () => {
           <ModelCurationPanel />
         </TabsContent>
 
+        <TabsContent value="website" className="mt-6">
+          <SiteSettingsPage embedded />
+        </TabsContent>
+
         <TabsContent value="settings" className="mt-6 space-y-6">
           <AdminSettingsPanel />
           <ProxyConfigCard />
           <StripeConfigCard />
-          <SiteSettingsPage embedded />
         </TabsContent>
       </Tabs>
 
