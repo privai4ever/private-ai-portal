@@ -1,0 +1,6 @@
+set -e
+
+echo "Running pre-deploy check: pnpm install --frozen-lockfile && pnpm build"
+
+pnpm install --frozen-lockfile
+pnpm build
