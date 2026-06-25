@@ -31,7 +31,7 @@ export const AppSidebar = () => {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
   const { settings } = useSiteSettings();
-  const siteName = settings?.site_name || "Autoversio";
+  const siteName = settings?.site_name || "Private AI";
   const logoUrl = settings?.logo_url;
 
   const { data: isAdmin } = useQuery({

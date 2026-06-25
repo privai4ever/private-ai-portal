@@ -26,7 +26,7 @@ export const ChatSidebar = ({
 }: ChatSidebarProps) => {
   const navigate = useNavigate();
   const { settings } = useSiteSettings();
-  const siteName = settings?.site_name || "Autoversio";
+  const siteName = settings?.site_name || "Private AI";
   const logoUrl = settings?.logo_url;
 
   const handleSelect = (id: string) => {
