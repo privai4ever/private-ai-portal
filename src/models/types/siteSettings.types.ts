@@ -86,9 +86,9 @@ export interface SiteSettings {
 }
 
 export const defaultSiteSettings: SiteSettings = {
-  site_name: "Autoversio",
+  site_name: "Private AI",
   tagline: "Secure Private LLM Access for Developers",
-  api_base_url: "https://api.autoversio.ai",
+  api_base_url: "",
   logo_url: "",
   favicon_url: "/favicon.png",
 
@@ -98,7 +98,7 @@ export const defaultSiteSettings: SiteSettings = {
   hero_headline_accent: "built for developers",
   hero_subtitle: "Secure LLM proxy with OpenAI-compatible API. Access multiple models, transparent pricing, and full data privacy. Get started in minutes.",
   hero_cta_text: "Get started",
-  hero_doc_url: "https://www.autoversio.com",
+  hero_doc_url: "",
   hero_doc_text: "Documentation",
   hero_pillars: [
     { title: "Private & Secure", description: "Your data stays yours. Full control over your AI infrastructure." },
@@ -144,16 +144,16 @@ export const defaultSiteSettings: SiteSettings = {
   footer_links: [],
 
   // SEO
-  seo_title: "Autoversio - Secure Private LLM Access for Developers",
+  seo_title: "Private AI - Secure Private LLM Access for Developers",
   seo_description: "Enterprise-grade private LLM proxy for secure AI development. Access multiple models with transparent pricing and full data privacy.",
   seo_keywords: "LLM, AI, proxy, private, secure, API",
-  og_title: "Autoversio - Secure Private LLM Access",
+  og_title: "Private AI - Secure Private LLM Access",
   og_description: "Enterprise-grade private LLM proxy for secure AI development",
   og_image_url: "/og-image.png",
   jsonld_organization: JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Autoversio",
+    "name": "Private AI",
     "description": "Secure Private LLM Access for Developers"
   }, null, 2),
   faq_schema: [],
