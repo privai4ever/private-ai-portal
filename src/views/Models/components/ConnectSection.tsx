@@ -21,9 +21,9 @@ export const ConnectSection = ({ defaultModel, baseUrl }: { defaultModel: string
           <div className="flex items-start justify-between gap-2">
             <div className="space-y-1">
               <p className="text-muted-foreground"># Base URL</p>
-              <p>{baseUrl}/</p>
+              <p>{baseUrl}/v1</p>
             </div>
-            <CopyButton text={`${baseUrl}/`} />
+            <CopyButton text={`${baseUrl}/v1`} />
           </div>
         </div>
 
