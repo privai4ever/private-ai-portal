@@ -29,7 +29,7 @@ export const ApiPage = () => {
   }, [authChecked, settingsLoading, isPublic, isAuthenticated, navigate]);
 
   const defaultModel = models.find((m) => m.is_default)?.id || models[0]?.id || "gpt-4o";
-  const baseUrl = settings?.api_base_url || "https://api.autoversio.ai";
+  const baseUrl = settings?.api_base_url || "https://your-lite-llm-proxy.example.com";
 
   return (
     <div className="container mx-auto px-4 py-10 max-w-3xl space-y-10">

@@ -8,7 +8,7 @@ export const DashboardApiPage = () => {
   const { settings } = useSiteSettings();
 
   const defaultModel = models.find((m) => m.is_default)?.id || models[0]?.id || "gpt-4o";
-  const baseUrl = settings?.api_base_url || "https://api.autoversio.ai";
+  const baseUrl = settings?.api_base_url || "https://your-lite-llm-proxy.example.com";
 
   return (
     <div className="p-6 space-y-8">
