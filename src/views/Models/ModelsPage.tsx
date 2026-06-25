@@ -61,7 +61,7 @@ export const ModelsPage = () => {
         )}
       </div>
 
-      <ConnectSection defaultModel={defaultModel} baseUrl={settings?.api_base_url || "https://api.autoversio.ai"} />
+      <ConnectSection defaultModel={defaultModel} baseUrl={settings?.api_base_url || "https://your-lite-llm-proxy.example.com"} />
     </div>
   );
 };

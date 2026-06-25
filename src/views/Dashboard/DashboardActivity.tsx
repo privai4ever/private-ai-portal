@@ -83,7 +83,7 @@ export const DashboardActivity = () => {
         <div>
           <h1 className="text-3xl font-bold">Activity</h1>
           <p className="text-sm text-muted-foreground mt-1">
-            Your usage across models on Autoversio
+            Your usage across models on Private AI
           </p>
         </div>
 
