@@ -4,7 +4,6 @@ import { ChatModelSelector } from "./ChatModelSelector";
 import { ChatKeySelector } from "./ChatKeySelector";
 import { ChatSystemPrompt } from "./ChatSystemPrompt";
 import type { ModelInfo } from "@/models/types/model.types";
-import { cn } from "@/lib/utils";
 
 interface ApiKeyOption {
   id: string;
