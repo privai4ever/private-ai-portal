@@ -1,4 +1,4 @@
-import { PanelRight, ChevronRight } from "lucide-react";
+import { PanelRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatModelSelector } from "./ChatModelSelector";
 import { ChatKeySelector } from "./ChatKeySelector";
@@ -49,7 +49,7 @@ export const ChatHeader = ({
       className="h-8 w-8 order-last ml-auto"
       title={sidebarOpen ? "Hide conversations" : "Show conversations"}
     >
-      <PanelRight className={cn("w-4 h-4", sidebarOpen && "rotate-180")} />
+      <PanelRight className="w-4 h-4" />
     </Button>
     <ChatModelSelector
       models={models}
