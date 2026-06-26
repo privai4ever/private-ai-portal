@@ -43,9 +43,10 @@ export const ChatHeader = ({
       variant="ghost"
       size="icon"
       onClick={onToggleSidebar}
-      className="h-8 w-8 md:hidden"
+      className="h-8 w-8 order-last ml-auto"
+      title="Conversations"
     >
-      <PanelLeft className="w-4 h-4" />
+      <PanelRight className="w-4 h-4" />
     </Button>
     <ChatModelSelector
       models={models}
