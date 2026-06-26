@@ -164,15 +164,23 @@ export const ChatPage = () => {
           isAdmin={isAdmin}
         />
 
-        <div ref={scrollRef} className="flex-1 overflow-auto">
-          {messages.length === 0 ? (
-            <ChatEmptyState onSelectPrompt={handleSend} />
-          ) : (
-            <ChatMessageList messages={messages} isStreaming={isStreaming} isReasoning={isReasoning} />
-          )}
-        </div>
-
-        <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
+        {messages.length === 0 ? (
+          <div className="flex-1 flex flex-col items-center justify-center overflow-auto">
+            <div className="w-full max-w-3xl px-4 flex flex-col items-center gap-8">
+              <ChatEmptyState />
+              <div className="w-full">
+                <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div ref={scrollRef} className="flex-1 overflow-auto">
+              <ChatMessageList messages={messages} isStreaming={isStreaming} isReasoning={isReasoning} />
+            </div>
+            <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
+          </>
+        )}
       </div>
     </div>
   );
