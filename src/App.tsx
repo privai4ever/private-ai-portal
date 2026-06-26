@@ -43,13 +43,12 @@ const App = () => (
             <Route path="api" element={<DashboardApiPage />} />
             <Route path="chat" element={<ChatPage />} />
           </Route>
-          <Route path="/chat" element={<ChatPage />} />
           <Route path="/models" element={<ModelsPage />} />
           <Route path="/api" element={<ApiPage />} />
           {/* Redirect old routes */}
           <Route path="/account" element={<Navigate to="/dashboard/account" replace />} />
           <Route path="/admin" element={<Navigate to="/dashboard/admin" replace />} />
-          <Route path="/dashboard/chat" element={<Navigate to="/chat" replace />} />
+          <Route path="/chat" element={<Navigate to="/dashboard/chat" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
