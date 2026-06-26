@@ -139,17 +139,7 @@ export const ChatPage = () => {
 
   return (
     <div className="flex h-full bg-background">
-      <ChatSidebar
-        conversations={conversations}
-        activeId={activeId}
-        onSelect={setActiveId}
-        onNew={handleNewChat}
-        onDelete={deleteConversation}
-        open={sidebarOpen}
-        onClose={() => setSidebarOpen(false)}
-      />
-
-      <div className="flex-1 flex flex-col min-w-0">
+      <div className="flex-1 flex flex-col min-w-0 h-full">
         <ChatHeader
           models={modelInfos}
           selectedModel={selectedModel}
@@ -164,24 +154,28 @@ export const ChatPage = () => {
           isAdmin={isAdmin}
         />
 
-        {messages.length === 0 ? (
-          <div className="flex-1 flex flex-col items-center justify-center overflow-auto">
-            <div className="w-full max-w-3xl px-4 flex flex-col items-center gap-8">
+        <div ref={scrollRef} className="flex-1 overflow-auto">
+          {messages.length === 0 ? (
+            <div className="h-full flex items-center justify-center">
               <ChatEmptyState />
-              <div className="w-full">
-                <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
-              </div>
             </div>
-          </div>
-        ) : (
-          <>
-            <div ref={scrollRef} className="flex-1 overflow-auto">
-              <ChatMessageList messages={messages} isStreaming={isStreaming} isReasoning={isReasoning} />
-            </div>
-            <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
-          </>
-        )}
+          ) : (
+            <ChatMessageList messages={messages} isStreaming={isStreaming} isReasoning={isReasoning} />
+          )}
+        </div>
+
+        <ChatInput onSend={handleSend} onStop={stopStreaming} disabled={isStreaming} />
       </div>
+
+      <ChatSidebar
+        conversations={conversations}
+        activeId={activeId}
+        onSelect={setActiveId}
+        onNew={handleNewChat}
+        onDelete={deleteConversation}
+        open={sidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
     </div>
   );
 };
