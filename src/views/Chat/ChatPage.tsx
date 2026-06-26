@@ -151,6 +151,7 @@ export const ChatPage = () => {
           onChangeSystemPrompt={setSystemPrompt}
           disabled={isStreaming}
           onToggleSidebar={() => setSidebarOpen((v) => !v)}
+          sidebarOpen={sidebarOpen}
           isAdmin={isAdmin}
         />
 
