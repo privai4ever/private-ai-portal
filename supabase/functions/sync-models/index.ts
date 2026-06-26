@@ -190,10 +190,10 @@ serve(async (req: Request) => {
         litellmModel,
         max_input_tokens: info.max_input_tokens || info.max_tokens || null,
         max_output_tokens: info.max_output_tokens || null,
-        input_cost_per_million: info.input_cost_per_token
+        input_cost_per_million: info.input_cost_per_token !== null && info.input_cost_per_token !== undefined
           ? Math.round(info.input_cost_per_token * 1_000_000 * 1000) / 1000
           : null,
-        output_cost_per_million: info.output_cost_per_token
+        output_cost_per_million: info.output_cost_per_token !== null && info.output_cost_per_token !== undefined
           ? Math.round(info.output_cost_per_token * 1_000_000 * 1000) / 1000
           : null,
         mode: info.mode || null,
